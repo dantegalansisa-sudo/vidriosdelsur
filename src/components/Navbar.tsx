@@ -49,8 +49,8 @@ export const Navbar = () => {
           <div className="navbar__logo">
             <span className="navbar__logo-icon">🪟</span>
             <div className="navbar__logo-text">
-              <span className="navbar__logo-name">Vidrios Del Sur</span>
-              <span className="navbar__logo-tagline">Cristal & Aluminio</span>
+              <span className="navbar__logo-name">YOMSUR EYPD</span>
+              <span className="navbar__logo-tagline">Vidrios y Ventanas</span>
             </div>
           </div>
 

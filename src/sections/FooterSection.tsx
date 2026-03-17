@@ -19,8 +19,8 @@ export const FooterSection = () => {
           <div className="footer-grid">
             {/* Col 1: Logo + Info */}
             <div className="footer-col">
-              <h3 className="footer-logo">Vidrios y Ventanas Del Sur</h3>
-              <p className="footer-tagline">Vidrio & Aluminio de Precisión</p>
+              <h3 className="footer-logo">YOMSUR EYPD</h3>
+              <p className="footer-tagline">Vidrios y Ventanas · Cristal & Aluminio</p>
               <div className="footer-badge">
                 <span className="footer-badge__icon">🏛️</span>
                 Empresa Registrada RD

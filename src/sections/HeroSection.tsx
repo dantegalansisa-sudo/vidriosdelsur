@@ -18,7 +18,7 @@ export const HeroSection = () => {
       <div className="hero__bg">
         <img
           src="/imagenes/Amazing window.jpg"
-          alt="Vidrios y Ventanas Del Sur"
+          alt="YOMSUR EYPD Vidrios y Ventanas"
         />
         <div className="hero__overlay" />
       </div>
@@ -38,13 +38,13 @@ export const HeroSection = () => {
 
           <div className="hero__title-block">
             <RevealText tag="div" className="hero-title" delay={0.1} style={{ color: '#FFFFFF' }}>
-              VIDRIOS &
+              YOMSUR
             </RevealText>
-            <RevealText tag="div" className="hero-title" delay={0.2} style={{ color: '#FFFFFF' }}>
-              VENTANAS
+            <RevealText tag="div" className="hero-title hero-title--warm" delay={0.2}>
+              EYPD
             </RevealText>
             <RevealText tag="div" className="hero-title hero-title--crystal" delay={0.3}>
-              DEL SUR
+              VIDRIOS
             </RevealText>
           </div>
 
@@ -86,7 +86,7 @@ export const HeroSection = () => {
             <LocationIcon size={16} color="var(--crystal-mid)" />
             Encuéntranos
           </div>
-          <div className="glass-card__name">Vidrios y Ventanas Del Sur</div>
+          <div className="glass-card__name">YOMSUR EYPD Vidrios y Ventanas</div>
           <div className="glass-card__address">
             C/ Ntra. Sra. de Fátima #54<br />
             Frente a Caribe Tours, Azua

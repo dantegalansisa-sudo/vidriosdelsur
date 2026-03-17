@@ -23,7 +23,10 @@
 
   /* Naranja del logo — acento cálido */
   --warm:         #F97316;
-  --warm-pale:    rgba(249,115,22,0.1);
+  --warm-mid:     #FB923C;
+  --warm-light:   #FDBA74;
+  --warm-pale:    #FFF7ED;
+  --warm-glow:    rgba(249,115,22,0.15);
 
   /* Texto */
   --text:         #0F172A;
@@ -41,6 +44,7 @@
   --gradient-crystal: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 100%);
   --gradient-steel:   linear-gradient(135deg, #475569 0%, #94A3B8 100%);
   --gradient-warm:    linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+  --gradient-brand:   linear-gradient(135deg, #F97316 0%, #FB923C 50%, #0EA5E9 100%);
   --gradient-glass:   linear-gradient(135deg,
     rgba(255,255,255,0.15) 0%,
     rgba(255,255,255,0.05) 100%);
@@ -53,6 +57,7 @@
   --shadow-card:    0 4px 24px rgba(15,23,42,0.07);
   --shadow-hover:   0 16px 48px rgba(15,23,42,0.12);
   --shadow-crystal: 0 8px 32px rgba(14,165,233,0.2);
+  --shadow-warm:    0 8px 32px rgba(249,115,22,0.25);
   --shadow-glass:   0 8px 32px rgba(15,23,42,0.2),
                     inset 0 1px 0 rgba(255,255,255,0.15);
 

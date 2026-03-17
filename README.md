@@ -1,6 +1,6 @@
-# 🪟 Vidrios y Ventanas Del Sur
+# 🪟 YOMSUR EYPD Vidrios y Ventanas
 
-Sitio web profesional para **Vidrios y Ventanas Del Sur**, negocio especializado en vidrios, cristales, aluminio y pulimetal en Azua, República Dominicana.
+Sitio web profesional para **YOMSUR EYPD Vidrios y Ventanas**, negocio especializado en vidrios, cristales, aluminio y pulimetal en Azua, República Dominicana.
 
 ## 🎨 Diseño
 
@@ -163,7 +163,7 @@ El proyecto incluye `vercel.json` para configuración automática:
 
 ## 📞 Contacto
 
-**Vidrios y Ventanas Del Sur**
+**YOMSUR EYPD Vidrios y Ventanas**
 - 📍 Azua, República Dominicana
 - 📱 WhatsApp: (809) 555-0123
 - 📧 Email: info@vidriosdelsur.com
