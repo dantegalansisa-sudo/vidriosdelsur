@@ -1,73 +1,177 @@
-# React + TypeScript + Vite
+# 🪟 Vidrios y Ventanas Del Sur
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web profesional para **Vidrios y Ventanas Del Sur**, negocio especializado en vidrios, cristales, aluminio y pulimetal en Azua, República Dominicana.
 
-Currently, two official plugins are available:
+## 🎨 Diseño
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Implementa el concepto **CRYSTAL ARCHITECTURE** - un sistema de diseño elegante y moderno con:
 
-## React Compiler
+- **Glassmorphism** y efectos de transparencia
+- Animaciones fluidas con **Framer Motion**
+- Cursor personalizado magnético
+- Scroll progress indicator
+- Revelar de texto palabra por palabra
+- Micro-interacciones y efectos hover sofisticados
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Paleta de Colores
 
-## Expanding the ESLint configuration
+- **Crystal Blue**: `#0EA5E9` - Color principal
+- **Steel Gray**: `#64748B` - Color secundario
+- **Dark**: `#0F172A` - Texto y fondos oscuros
+- **White**: `#FFFFFF` - Fondos claros
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tecnologías
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React 19** - Biblioteca de UI
+- **TypeScript** - Tipado estático
+- **Vite 8** - Build tool y dev server
+- **Framer Motion** - Animaciones
+- **CSS Modules** - Estilos
+- **Google Fonts** - Outfit (display) y DM Sans (body)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Estructura del Proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+vidrios-del-sur/
+├── public/
+│   ├── imagenes/          # Imágenes del proyecto
+│   └── icons.svg          # Iconos SVG
+├── src/
+│   ├── components/        # Componentes reutilizables
+│   │   ├── Navbar.tsx
+│   │   ├── CustomCursor.tsx
+│   │   ├── ScrollProgress.tsx
+│   │   ├── WhatsAppButton.tsx
+│   │   ├── BackToTop.tsx
+│   │   ├── Icons.tsx
+│   │   ├── MagneticButton.tsx
+│   │   ├── RevealText.tsx
+│   │   └── AnimatedCounter.tsx
+│   ├── sections/          # Secciones de la página
+│   │   ├── HeroSection.tsx
+│   │   ├── TrustBarSection.tsx
+│   │   ├── ServicesSection.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   ├── WhyUsSection.tsx
+│   │   ├── ProcessSection.tsx
+│   │   ├── StatsSection.tsx
+│   │   ├── TestimonialsSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   └── FooterSection.tsx
+│   ├── hooks/             # Custom hooks
+│   │   ├── useMouse.ts
+│   │   └── useScrollProgress.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+└── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Instalación y Uso
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerrequisitos
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+ y npm
+
+### Instalación
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/dantegalansisa-sudo/vidriosdelsur.git
+
+# Entrar al directorio
+cd vidriosdelsur
+
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
 ```
+
+El sitio estará disponible en `http://localhost:5173`
+
+### Build para Producción
+
+```bash
+# Crear build optimizado
+npm run build
+
+# Preview del build
+npm run preview
+```
+
+## 🌐 Despliegue en Vercel
+
+### Opción 1: Despliegue Automático desde GitHub
+
+1. Ve a [vercel.com](https://vercel.com)
+2. Haz clic en **"Add New Project"**
+3. Importa el repositorio `dantegalansisa-sudo/vidriosdelsur`
+4. Vercel detectará automáticamente la configuración de Vite
+5. Haz clic en **"Deploy"**
+
+### Opción 2: Despliegue con Vercel CLI
+
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
+
+# Desplegar
+vercel
+```
+
+### Configuración de Vercel
+
+El proyecto incluye `vercel.json` para configuración automática:
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+## 📱 Características
+
+### Secciones
+
+- ✅ **Hero** - Portada impactante con imagen de fondo
+- ✅ **Trust Bar** - Barra de confianza con stats
+- ✅ **Servicios** - Grid de 7 servicios con imágenes
+- ✅ **Proyectos** - Galería de 6 proyectos realizados
+- ✅ **Por Qué Nosotros** - Ventajas competitivas
+- ✅ **Proceso** - Pasos de trabajo
+- ✅ **Estadísticas** - Contadores animados
+- ✅ **Testimonios** - Opiniones de clientes
+- ✅ **Contacto** - Formulario y datos de contacto
+- ✅ **Footer** - Enlaces y redes sociales
+
+### Componentes Interactivos
+
+- 🎯 Cursor personalizado magnético
+- 📊 Barra de progreso de scroll
+- 💬 Botón flotante de WhatsApp
+- ⬆️ Botón "Volver arriba"
+- 🎨 Navbar con glassmorphism
+- ✨ Animaciones de reveal en scroll
+- 🔄 Transiciones suaves entre secciones
+
+## 📞 Contacto
+
+**Vidrios y Ventanas Del Sur**
+- 📍 Azua, República Dominicana
+- 📱 WhatsApp: (809) 555-0123
+- 📧 Email: info@vidriosdelsur.com
+
+## 📄 Licencia
+
+© 2026 Vidrios y Ventanas Del Sur. Todos los derechos reservados.
+
+---
+
+**Desarrollado con ❤️ usando React + TypeScript + Vite**
