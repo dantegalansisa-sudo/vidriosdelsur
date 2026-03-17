@@ -1,0 +1,56 @@
+/* TRUST BAR SECTION */
+
+.trust-bar {
+  background: var(--bg-steel);
+  border-top: 1px solid var(--border-crystal);
+  border-bottom: 1px solid var(--border-crystal);
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.trust-bar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  gap: 40px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.trust-item__icon {
+  font-size: 20px;
+}
+
+.trust-item__text {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+/* Mobile - Scrolling Marquee */
+@media (max-width: 768px) {
+  .trust-bar__container {
+    justify-content: flex-start;
+    animation: scroll 20s linear infinite;
+    gap: 60px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}

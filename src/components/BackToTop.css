@@ -1,0 +1,33 @@
+/* BACK TO TOP BUTTON */
+
+.back-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-crystal);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9998;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+  transition: box-shadow 0.3s;
+}
+
+.back-to-top:hover {
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.5);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+    bottom: 90px;
+    right: 20px;
+  }
+}
