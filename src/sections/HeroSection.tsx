@@ -17,7 +17,7 @@ export const HeroSection = () => {
       {/* Fondo oscuro arquitectónico */}
       <div className="hero__bg">
         <img
-          src="/imagenes/Amazing window.jpg"
+          src="/imagenes/ventana.png"
           alt="YOMSUR EYPD Vidrios y Ventanas"
         />
         <div className="hero__overlay" />
