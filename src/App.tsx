@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { CustomCursor } from './components/CustomCursor';
 import { ScrollProgress } from './components/ScrollProgress';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Navbar } from './components/Navbar';
@@ -11,7 +10,6 @@ import { ServiceDetailPage } from './pages/ServiceDetailPage';
 function App() {
   return (
     <>
-      <CustomCursor />
       <ScrollProgress />
       <Navbar />
       <WhatsAppButton />

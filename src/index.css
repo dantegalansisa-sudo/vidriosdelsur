@@ -83,7 +83,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: none !important;
+  cursor: auto;
 }
 
 html {
@@ -121,41 +121,6 @@ body {
 ::selection {
   background: var(--crystal);
   color: white;
-}
-
-/* Cursor Crystal */
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--crystal);
-  pointer-events: none;
-  z-index: 99999;
-  mix-blend-mode: normal;
-}
-
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1.5px solid var(--crystal);
-  pointer-events: none;
-  z-index: 99998;
-  opacity: 0.5;
-  transition: width 0.3s, height 0.3s, opacity 0.3s;
-}
-
-.cursor-ring.cursor--hover {
-  width: 54px;
-  height: 54px;
-  opacity: 1;
-  background: var(--crystal-glow);
 }
 
 /* ScrollProgress */
@@ -240,7 +205,7 @@ body {
   box-shadow: var(--shadow-crystal);
   transition: transform 0.25s, box-shadow 0.25s;
   border: none;
-  cursor: none !important;
+  cursor: auto;
 }
 
 .btn-crystal:hover {
@@ -257,7 +222,7 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.3);
   padding-bottom: 4px;
   transition: color 0.2s, border-color 0.2s;
-  cursor: none !important;
+  cursor: auto;
 }
 
 .btn-ghost-white:hover {
@@ -282,7 +247,7 @@ body {
   box-shadow: 0 4px 24px rgba(37,211,102,0.4);
   z-index: 9999;
   transition: transform 0.3s, box-shadow 0.3s;
-  cursor: none !important;
+  cursor: auto;
 }
 
 .whatsapp-float:hover {
@@ -290,14 +255,3 @@ body {
   box-shadow: 0 8px 40px rgba(37,211,102,0.6);
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  * {
-    cursor: auto !important;
-  }
-
-  .cursor-dot,
-  .cursor-ring {
-    display: none;
-  }
-}
