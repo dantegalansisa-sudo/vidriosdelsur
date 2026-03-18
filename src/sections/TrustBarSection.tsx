@@ -6,7 +6,7 @@ const trustItems = [
   { icon: '📐', text: 'Medidas a tu Gusto' },
   { icon: '🔧', text: 'Instalación Incluida' },
   { icon: '📍', text: 'Frente a Caribe Tours, Azua' },
-  { icon: '📞', text: '829-491-6977' },
+  { icon: '📞', text: '829-329-3115' },
 ];
 
 export const TrustBarSection = () => {

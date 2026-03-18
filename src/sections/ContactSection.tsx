@@ -5,10 +5,8 @@ import './ContactSection.css';
 
 const contactInfo = {
   address: 'C/ Ntra. Sra. de Fátima #54, Frente a Caribe Tours, Azua',
-  phone1: '829-491-6977',
-  phone2: '809-521-1180',
-  phone3: '829-329-3115',
-  whatsapp: 'https://wa.me/18294916977',
+  phone: '829-329-3115',
+  whatsapp: 'https://wa.me/18293293115',
 };
 
 export const ContactSection = () => {
@@ -57,11 +55,9 @@ export const ContactSection = () => {
                 <PhoneIcon size={24} color="var(--crystal)" />
               </div>
               <div>
-                <h3 className="contact-info__title">Teléfonos</h3>
+                <h3 className="contact-info__title">Teléfono</h3>
                 <p className="contact-info__text">
-                  <a href={`tel:${contactInfo.phone1}`}>{contactInfo.phone1}</a><br />
-                  <a href={`tel:${contactInfo.phone2}`}>{contactInfo.phone2}</a><br />
-                  <a href={`tel:${contactInfo.phone3}`}>{contactInfo.phone3}</a>
+                  <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
                 </p>
               </div>
             </div>

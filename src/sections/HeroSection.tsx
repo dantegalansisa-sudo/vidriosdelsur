@@ -64,7 +64,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
           >
-            <MagneticButton className="btn-crystal" href="https://wa.me/18294916977" target="_blank">
+            <MagneticButton className="btn-crystal" href="https://wa.me/18293293115" target="_blank">
               <ChatIcon size={18} color="white" />
               Solicitar Cotización
             </MagneticButton>
@@ -93,20 +93,12 @@ export const HeroSection = () => {
           </div>
           <div className="glass-card__divider" />
           <div className="glass-card__phones">
-            <a href="tel:8294916977" className="glass-phone">
-              <PhoneIcon size={18} color="rgba(255,255,255,0.7)" />
-              829-491-6977
-            </a>
-            <a href="tel:8095211180" className="glass-phone">
-              <PhoneIcon size={18} color="rgba(255,255,255,0.7)" />
-              809-521-1180
-            </a>
             <a href="tel:8293293115" className="glass-phone">
               <PhoneIcon size={18} color="rgba(255,255,255,0.7)" />
               829-329-3115
             </a>
           </div>
-          <a href="https://wa.me/18294916977" target="_blank" rel="noopener noreferrer" className="glass-cta">
+          <a href="https://wa.me/18293293115" target="_blank" rel="noopener noreferrer" className="glass-cta">
             <WhatsAppIcon size={20} color="white" />
             WhatsApp
           </a>

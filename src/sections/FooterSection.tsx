@@ -50,15 +50,11 @@ export const FooterSection = () => {
                 </li>
                 <li>
                   <PhoneIcon size={18} color="var(--crystal-mid)" />
-                  <div>
-                    <a href="tel:8294916977">829-491-6977</a><br />
-                    <a href="tel:8095211180">809-521-1180</a><br />
-                    <a href="tel:8293293115">829-329-3115</a>
-                  </div>
+                  <a href="tel:8293293115">829-329-3115</a>
                 </li>
                 <li>
                   <WhatsAppIcon size={18} color="var(--crystal-mid)" />
-                  <a href="https://wa.me/18294916977" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/18293293115" target="_blank" rel="noopener noreferrer">
                     WhatsApp
                   </a>
                 </li>
@@ -69,12 +65,8 @@ export const FooterSection = () => {
             <div className="footer-col">
               <h4 className="footer-title">Horario de Atención</h4>
               <p className="footer-text">
-                Lunes a Viernes<br />
-                <strong>8:00 AM - 6:00 PM</strong>
-              </p>
-              <p className="footer-text">
-                Sábados<br />
-                <strong>8:00 AM - 2:00 PM</strong>
+                Lunes a Sábado<br />
+                <strong>8:00 AM - 7:00 PM</strong>
               </p>
               <p className="footer-text">
                 Domingos<br />

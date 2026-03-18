@@ -69,13 +69,13 @@ export const Navbar = () => {
 
           {/* CTA */}
           <div className="navbar__cta">
-            <a href="tel:8294916977" className="navbar__phone">
+            <a href="tel:8293293115" className="navbar__phone">
               <PhoneIcon size={18} color="var(--crystal)" />
-              829-491-6977
+              829-329-3115
             </a>
             <MagneticButton
               className="btn-crystal navbar__button"
-              href="https://wa.me/18294916977"
+              href="https://wa.me/18293293115"
               target="_blank"
             >
               <WhatsAppIcon size={16} color="white" />
@@ -118,12 +118,12 @@ export const Navbar = () => {
               ))}
             </div>
             <div className="mobile-menu__cta">
-              <a href="tel:8294916977" className="mobile-menu__phone">
+              <a href="tel:8293293115" className="mobile-menu__phone">
                 <PhoneIcon size={20} color="var(--crystal)" />
-                829-491-6977
+                829-329-3115
               </a>
               <a
-                href="https://wa.me/18294916977"
+                href="https://wa.me/18293293115"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-crystal"
