@@ -9,6 +9,7 @@ import {
   ChatIcon,
   ArrowRightIcon,
 } from '../components/Icons';
+import { WHATSAPP_URL } from '../data/whatsapp';
 import './HeroSection.css';
 
 export const HeroSection = () => {
@@ -64,7 +65,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
           >
-            <MagneticButton className="btn-crystal" href="https://wa.me/18293293115" target="_blank">
+            <MagneticButton className="btn-crystal" href={WHATSAPP_URL} target="_blank">
               <ChatIcon size={18} color="white" />
               Solicitar Cotización
             </MagneticButton>
@@ -98,7 +99,7 @@ export const HeroSection = () => {
               829-329-3115
             </a>
           </div>
-          <a href="https://wa.me/18293293115" target="_blank" rel="noopener noreferrer" className="glass-cta">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="glass-cta">
             <WhatsAppIcon size={20} color="white" />
             WhatsApp
           </a>

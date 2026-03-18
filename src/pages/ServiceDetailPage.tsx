@@ -2,6 +2,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { services } from '../data/services';
+import { whatsappWithService } from '../data/whatsapp';
 import { WhatsAppIcon, ArrowRightIcon } from '../components/Icons';
 import './ServiceDetailPage.css';
 
@@ -29,8 +30,7 @@ export const ServiceDetailPage = () => {
     );
   }
 
-  const whatsappMsg = `Hola, me interesa el servicio de *${service.title}*. ¿Me pueden dar más información y una cotización?`;
-  const whatsappUrl = `https://wa.me/18293293115?text=${encodeURIComponent(whatsappMsg)}`;
+  const whatsappUrl = whatsappWithService(service.title);
 
   return (
     <>

@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MagneticButton } from './MagneticButton';
 import { WhatsAppIcon, PhoneIcon } from './Icons';
+import { WHATSAPP_URL } from '../data/whatsapp';
 import './Navbar.css';
 
 const navLinks = [
@@ -98,7 +99,7 @@ export const Navbar = () => {
             </a>
             <MagneticButton
               className="btn-crystal navbar__button"
-              href="https://wa.me/18293293115"
+              href={WHATSAPP_URL}
               target="_blank"
             >
               <WhatsAppIcon size={16} color="white" />
@@ -146,7 +147,7 @@ export const Navbar = () => {
                 829-329-3115
               </a>
               <a
-                href="https://wa.me/18293293115"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-crystal"

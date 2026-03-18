@@ -1,26 +1,26 @@
 import { motion } from 'framer-motion';
 import { RevealText } from '../components/RevealText';
 import { PhoneIcon, LocationIcon, WhatsAppIcon } from '../components/Icons';
+import { WHATSAPP_URL, whatsappWithForm } from '../data/whatsapp';
 import './ContactSection.css';
 
 const contactInfo = {
   address: 'C/ Ntra. Sra. de Fátima #54, Frente a Caribe Tours, Azua',
   phone: '829-329-3115',
-  whatsapp: 'https://wa.me/18293293115',
 };
 
 export const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const nombre = formData.get('nombre');
-    const telefono = formData.get('telefono');
-    const servicio = formData.get('servicio');
-    const descripcion = formData.get('descripcion');
-    const medidas = formData.get('medidas');
-
-    const mensaje = `Hola, soy ${nombre}. Me interesa una cotización:%0A%0AServicio: ${servicio}%0ADescripción: ${descripcion}%0AMedidas: ${medidas}%0ATeléfono: ${telefono}`;
-    window.open(`${contactInfo.whatsapp}?text=${mensaje}`, '_blank');
+    const url = whatsappWithForm({
+      nombre: formData.get('nombre') as string,
+      telefono: formData.get('telefono') as string,
+      servicio: formData.get('servicio') as string,
+      descripcion: formData.get('descripcion') as string,
+      medidas: formData.get('medidas') as string,
+    });
+    window.open(url, '_blank');
   };
 
   return (
@@ -69,7 +69,7 @@ export const ContactSection = () => {
               <div>
                 <h3 className="contact-info__title">WhatsApp</h3>
                 <p className="contact-info__text">
-                  <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                     Envíanos un mensaje
                   </a>
                 </p>

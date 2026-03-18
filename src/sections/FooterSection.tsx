@@ -1,4 +1,5 @@
 import { PhoneIcon, LocationIcon, WhatsAppIcon } from '../components/Icons';
+import { WHATSAPP_URL } from '../data/whatsapp';
 import './FooterSection.css';
 
 const services = [
@@ -54,7 +55,7 @@ export const FooterSection = () => {
                 </li>
                 <li>
                   <WhatsAppIcon size={18} color="var(--crystal-mid)" />
-                  <a href="https://wa.me/18293293115" target="_blank" rel="noopener noreferrer">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                     WhatsApp
                   </a>
                 </li>
