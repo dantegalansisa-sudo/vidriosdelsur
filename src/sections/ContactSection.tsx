@@ -130,6 +130,26 @@ export const ContactSection = () => {
             </form>
           </motion.div>
         </div>
+
+        {/* Google Maps */}
+        <motion.div
+          className="contact-map"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <iframe
+            title="Ubicación YOMSUR EYPD Vidrios y Ventanas"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.5!2d-70.7291!3d18.4533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI3JzEyLjAiTiA3MMKwNDMnNDQuOCJX!5e0!3m2!1ses!2sdo!4v1700000000000"
+            width="100%"
+            height="400"
+            style={{ border: 0, borderRadius: '16px' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </motion.div>
       </div>
     </section>
   );

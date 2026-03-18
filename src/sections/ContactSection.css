@@ -107,6 +107,18 @@
   border: none;
 }
 
+/* Map */
+.contact-map {
+  margin-top: 64px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.contact-map iframe {
+  display: block;
+}
+
 /* Mobile */
 @media (max-width: 1024px) {
   .contact-grid {

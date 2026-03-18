@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Inicio', href: '#' },
   { label: 'Servicios', href: '#servicios' },
   { label: '¿Por qué nosotros?', href: '#why-us' },
+  { label: 'Nosotros', href: '/nosotros' },
   { label: 'Contacto', href: '#contacto' },
 ];
 
@@ -31,6 +32,12 @@ export const Navbar = () => {
 
   const scrollToSection = (href: string) => {
     setIsMobileMenuOpen(false);
+
+    // Direct route (e.g. /nosotros)
+    if (href.startsWith('/')) {
+      navigate(href);
+      return;
+    }
 
     if (isHome) {
       if (href === '#') {
