@@ -49,9 +49,9 @@
     rgba(255,255,255,0.15) 0%,
     rgba(255,255,255,0.05) 100%);
   --gradient-overlay: linear-gradient(to right,
-    rgba(15,23,42,0.65) 0%,
-    rgba(15,23,42,0.35) 55%,
-    rgba(15,23,42,0) 100%);
+    rgba(15,23,42,0.7) 0%,
+    rgba(15,23,42,0.3) 50%,
+    rgba(15,23,42,0.1) 100%);
 
   /* Sombras */
   --shadow-card:    0 4px 24px rgba(15,23,42,0.07);
