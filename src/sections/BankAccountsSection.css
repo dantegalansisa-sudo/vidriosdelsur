@@ -1,0 +1,78 @@
+/* BANK ACCOUNTS SECTION */
+.bank-accounts {
+  padding: var(--section-padding);
+  background: var(--bg-steel);
+}
+
+.bank-accounts__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 720px;
+}
+
+.bank-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bank-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.bank-card__accent {
+  height: 4px;
+  width: 100%;
+}
+
+.bank-card__content {
+  padding: 28px 32px 32px;
+}
+
+.bank-card__bank {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.bank-card__field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.bank-card__field:last-child {
+  margin-bottom: 0;
+}
+
+.bank-card__label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.bank-card__value {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 640px) {
+  .bank-accounts__grid {
+    grid-template-columns: 1fr;
+  }
+}

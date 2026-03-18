@@ -7,6 +7,7 @@ import { ProcessSection } from '../sections/ProcessSection';
 import { StatsSection } from '../sections/StatsSection';
 import { TestimonialsSection } from '../sections/TestimonialsSection';
 import { ContactSection } from '../sections/ContactSection';
+import { BankAccountsSection } from '../sections/BankAccountsSection';
 
 export const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ export const HomePage = () => {
       <ProcessSection />
       <StatsSection />
       <TestimonialsSection />
+      <BankAccountsSection />
       <ContactSection />
     </>
   );
