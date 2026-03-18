@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MagneticButton } from './MagneticButton';
 import { WhatsAppIcon, PhoneIcon } from './Icons';
@@ -14,6 +15,9 @@ const navLinks = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,13 +29,32 @@ export const Navbar = () => {
   }, []);
 
   const scrollToSection = (href: string) => {
-    if (href === '#') {
+    setIsMobileMenuOpen(false);
+
+    if (isHome) {
+      if (href === '#') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    } else {
+      // Navigate to home first, then scroll
+      if (href === '#') {
+        navigate('/');
+      } else {
+        navigate('/' + href);
+      }
+    }
+  };
+
+  const goHome = () => {
+    if (isHome) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      navigate('/');
     }
     setIsMobileMenuOpen(false);
   };
@@ -46,13 +69,13 @@ export const Navbar = () => {
       >
         <div className="navbar__container section-container">
           {/* Logo */}
-          <div className="navbar__logo">
+          <button className="navbar__logo" onClick={goHome}>
             <span className="navbar__logo-icon">🪟</span>
             <div className="navbar__logo-text">
               <span className="navbar__logo-name">YOMSUR EYPD</span>
               <span className="navbar__logo-tagline">Vidrios y Ventanas</span>
             </div>
-          </div>
+          </button>
 
           {/* Desktop Links */}
           <div className="navbar__links">
