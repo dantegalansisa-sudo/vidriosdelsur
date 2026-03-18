@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { RevealText } from '../components/RevealText';
 import { MagneticButton } from '../components/MagneticButton';
 import {
@@ -12,16 +13,59 @@ import {
 import { WHATSAPP_URL } from '../data/whatsapp';
 import './HeroSection.css';
 
+const heroSlides = [
+  { src: '/imagenes/descarga (1).webp', alt: 'Casa moderna con ventanales de cristal' },
+  { src: '/imagenes/descarga (12).jpg', alt: 'Fachada con panel de vidrio arquitectónico' },
+  { src: '/imagenes/descarga (13).jpg', alt: 'Ventanal de cristal reflectivo' },
+  { src: '/imagenes/descarga.webp', alt: 'Baño de lujo con cristal y mármol' },
+  { src: '/imagenes/descarga (2).webp', alt: 'Cocina moderna con acabados en cristal' },
+  { src: '/imagenes/Luxury Smart Bathroom with LED Shower & Mirror _ Hominexus_.jpg', alt: 'Ducha de cristal con iluminación LED' },
+  { src: '/imagenes/Bathroom Decor.jpg', alt: 'Baño inteligente con puertas de cristal' },
+];
+
+const SLIDE_INTERVAL = 5000;
+
 export const HeroSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % heroSlides.length);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(nextSlide, SLIDE_INTERVAL);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
+
   return (
     <section className="hero">
-      {/* Fondo oscuro arquitectónico */}
+      {/* Slideshow de fondo */}
       <div className="hero__bg">
-        <img
-          src="/imagenes/ventana.png"
-          alt="YOMSUR EYPD Vidrios y Ventanas"
-        />
+        <AnimatePresence mode="popLayout">
+          <motion.img
+            key={current}
+            src={heroSlides[current].src}
+            alt={heroSlides[current].alt}
+            className="hero__bg-img"
+            initial={{ opacity: 0, scale: 1.08 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: 'easeInOut' }}
+          />
+        </AnimatePresence>
         <div className="hero__overlay" />
+      </div>
+
+      {/* Indicadores del slide */}
+      <div className="hero__indicators">
+        {heroSlides.map((_, i) => (
+          <button
+            key={i}
+            className={`hero__indicator ${i === current ? 'hero__indicator--active' : ''}`}
+            onClick={() => setCurrent(i)}
+            aria-label={`Ir a imagen ${i + 1}`}
+          />
+        ))}
       </div>
 
       <div className="hero__content section-container">
